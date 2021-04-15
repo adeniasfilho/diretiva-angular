@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { OlaAngularComponent} from './ola-angular/ola-angular.component';
+
 import { AppComponent } from './app.component';
-import { DiretivaAngularCliComponent } from './diretiva-angular-cli/diretiva-angular-cli.component';
+import { OlaAngularCliComponent } from './ola-angular-cli/ola-angular-cli.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DiretivaAngularCliComponent
+    OlaAngularComponent,
+    OlaAngularCliComponent
   ],
   imports: [
     BrowserModule

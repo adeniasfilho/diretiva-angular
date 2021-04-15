@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { DiretivaAngularCliComponent } from './diretiva-angular-cli/diretiva-angular-cli.component';
+import { PrimeiroAngularComponent } from './primeiro-angular/primeiro-angular.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DiretivaAngularCliComponent
+    PrimeiroAngularComponent
   ],
   imports: [
     BrowserModule
