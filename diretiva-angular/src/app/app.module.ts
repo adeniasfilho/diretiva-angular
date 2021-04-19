@@ -3,11 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { DiretivaAngularCliComponent } from './diretiva-angular-cli/diretiva-angular-cli.component';
+import { PessoaCartaoComponent } from './pessoa-cartao/pessoa-cartao.component';
+import { PessoaCadastroComponent } from './pessoa-cadastro/pessoa-cadastro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DiretivaAngularCliComponent
+    DiretivaAngularCliComponent,
+    PessoaCartaoComponent,
+    PessoaCadastroComponent
   ],
   imports: [
     BrowserModule

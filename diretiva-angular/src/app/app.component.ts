@@ -18,6 +18,15 @@ export class AppComponent {
     this.textoBotao = this.esconder ? "Esconder" : "Exibir";
     this.esconder = !this.esconder;
   }
+  onAdicionarPessoa(pessoa) {
+    this.pessoas = [pessoa, ...this.pessoas];
+    }
+  
+  adicionar(nome, idade) {
+    if (!!nome.replace(/\s/g,"") && !!idade.replace(/\s/g,"")) {
+      this.pessoas = [{ nome: nome, idade: idade }, ...this.pessoas];
+    }
+  }
   pegarCor(idade) {
     return idade >= 30 ? "red" : "blue";
   }

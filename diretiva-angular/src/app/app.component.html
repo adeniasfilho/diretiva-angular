@@ -1,26 +1,55 @@
-<div class = "container">
-  <div class= "row">
-    <table *ngIf = "!esconder "class="table.table-striped table-hover">
-      <thread>
+<div class="container">
+  <div class="row">
+    
+    <table *ngIf="!esconder" class="table table-striped table-hover">
+      <thead>
         <tr>
           <td>Nome</td>
           <td>Idade</td>
         </tr>
-      </thread>
+      </thead>
       <tbody>
-        <tr *ngFor="let pessoa of pessoa">
+        <tr *ngFor="let pessoa of pessoas">
           <td>{{pessoa.nome}}</td>
-          <td
-            [style.cor]="pegarCor(pessoa.idade)">{{pessoa.idade}}</td>
+          <td>{{pessoa.idade}}</td>
+        </tr>
+        <tr>
+          <td>Roberto</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>Mariana</td>
+          <td>21</td>
         </tr>
       </tbody>
     </table>
+    
+    <div class="row">
+      <div class="col-md-6 form-group">
+        <label for="nomeInput">Nome</label>
+        <input type="text" class="form-control" id="nomeInput" #nomeInput>
+      </div>
+      <div class="col-md-6 form-group mb-2">
+        <label for="Idade">Idade</label>
+        <input type="text" class="form-control" id="nomeInput" #idadeInput>
+      </div>
     </div>
     <div class="row">
-      <buttom class="btn-primary btn-block mt-3"(click)=
-      alterarExibicao()>
-         {{textoBotao}}</buttom>
+      <button class="btn btn-primary btn-block" (click)="adicionar(nomeInput.value,
+      idadeInput.value)" type="button">Cadastrar</button>
+    </div>
 
-    
+    <div class="container">
+      <app-pessoa-cadastro (pessoaAdicionada)="onAdicionarPessoa($event)"></app-pessoa-cadastro>
+      <div class="row">
+        <div class="col-4" *ngFor="let pessoa of pessoas">
+          <app-pessoa-cartao [pessoa]="pessoa"></app-pessoa-cartao>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+    <button class="btn btn-primary btn-block mt-3" (click)=alterarExibicao()>{{textoBotao}}</button>
   </div>
 </div>
