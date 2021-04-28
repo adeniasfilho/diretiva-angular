@@ -1,9 +1,45 @@
-<div class="container">
-
-  <app-pessoa-cadastro (pessoaAdicionada)="onAdicionarPessoa($event)"></app-pessoa-cadastro>
-
-  <div class=" col-4" *ngFor="let pessoa of pessoas">
-    <app-pessoa-cartao [pessoa]="pessoa"></app-pessoa-cartao>
+<p>teste-pipes works!</p>
+<!-- <div class="container">
+  <div class="row">
+    <div class="form-group col-12">
+      <label for="lembreteInputText">Lembrete</label>
+      <input [appSombraNaTabela]="variavelSombra" type="text" id="lembreteInputText" [(ngModel)]="lembrete"
+        placeholder="Digite seu lembrete" class="form-control" #apiSombra="sombraNoComponente">
+    </div>
   </div>
 
- 
+  <div class="row">
+    <div class="col-12">
+      <button type="button" class="btn btn-primary btn-block" (click)="salvar()">Salvar</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <button type="button" class="btn btn-primary btn-block mt-3"
+        (click)="apiSombra.quandoOMousePassarPorCima()">Aplicar sombra</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <button type="button" class="btn btn-primary btn-block mt-3" (click)="apiSombra.quandoOMouseSair()">Remover
+        sombra</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <table [appSombraNaTabela]="variavelSombra" class="table table-striped table-hover mt-3">
+      <thead>
+        <tr>
+          <th class=" text-center">Lembretes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let lembrete of lembretes">
+          <td class="text-center">{{lembrete}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> -->

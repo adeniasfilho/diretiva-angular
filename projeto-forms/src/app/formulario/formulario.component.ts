@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Pessoa } from '../pessoa';
 
 @Component({
   selector: 'app-formulario',
@@ -8,16 +9,22 @@ import { NgForm } from '@angular/forms';
 })
 export class FormularioComponent implements OnInit {
 
-  constructor() { }
+  
+  pessoa: Pessoa = new Pessoa();
 
   ngOnInit(): void {
   }
-  salvar(pessoaForm) {
-    const nome = pessoaForm.value.nome;
-    const fone = pessoaForm.value.fone;
-    const email = pessoaForm.value.email;
-    const profissao = pessoaForm.value.profissao;
-    console.log(`Nome: ${nome}, Fone: ${fone}, Email: ${email}, Profissão: ${profissao}`)
+  profissoes = ['Engenheiro', 'Professor', 'Quimico', 'Zoólogo'];
+
+  salvar(pessoaForm: NgForm) {
+    
+    this.pessoa.nome = pessoaForm.value.nome;
+    this.pessoa.fone = pessoaForm.value.fone;
+    this.pessoa.email = pessoaForm.value.email;
+    this.pessoa.profissao = pessoaForm.value.profissao;
+
+    console.log(this.pessoa);
+    console.log(pessoaForm);
     }
 
 }
